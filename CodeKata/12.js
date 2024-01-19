@@ -13,6 +13,17 @@ function solution(phone_number) {
   for (let i = 0; i < reversedPhoneNumber.length; i++) {
     answer += i < 4 ? reversedPhoneNumber[i] : "*";
   }
-
+  return answer.split("").reverse().join("");
+}
+function solution(phone_number) {
+  var answer = "";
+  let reversedPhoneNumber = phone_number.split("").reverse().join("");
+  for (let i = 0; i < reversedPhoneNumber.length; i++) {
+    if (i < 4) {
+      answer += reversedPhoneNumber[i];
+    } else {
+      answer += "*";
+    }
+  }
   return answer.split("").reverse().join("");
 }
